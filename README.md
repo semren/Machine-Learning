@@ -20,3 +20,19 @@ For each file, the raw data contains the hexadecimal representation of the file'
 
 1. Computationally Intensive: The files we were almost half a terrabyte in size uncompressed. This was a huge challenge to handle on a relatively low power laptop. This problem was handled using multiprocessing or parallelisation. I split the data into subsets and ran my code on subsets of the dataset at a given time.
 2. New domain: existing work in this area helped me understand the data I was working with and what are featurizations that are commonly used on such data. 
+
+## Featurizations
+
+1. .asm files 
+
+
+
+## Models and Multi-class Logarthmic_loss ( this was the test metric as per the Kaggle Challenge )
+
+| Model            | Test_Log_loss | Train_Log_loss   | Files_Used                  |
+-------------------|---------------|------------------|-----------------------------|
+| Random Forest    |               |                  | featurizations of both .asm |
+| Classifier       | 0.04          | 0.016            | and .byte files used        |
+|------------------|---------------|------------------|-----------------------------|
+| XGBClassifier    | 0.032         | 0.012            | same as above               |
+|------------------|---------------|------------------|-----------------------------|
